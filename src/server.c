@@ -1025,12 +1025,6 @@ int main (int argc, char **argv) {
 						"can't find username", srv->srvconf.username);
 				return -1;
 			}
-
-			if (pwd->pw_uid == 0) {
-				log_error_write(srv, __FILE__, __LINE__, "s",
-						"I will not set uid to 0\n");
-				return -1;
-			}
 		}
 
 		if (!buffer_string_is_empty(srv->srvconf.groupname)) {
